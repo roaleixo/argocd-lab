@@ -1,0 +1,7 @@
+replicaCount: 1
+service:
+type: NodePort
+port: 80
+nodePort: 30081 # ajuste se já estiver em uso
+ingress:
+enabled: false

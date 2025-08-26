@@ -1,0 +1,6 @@
+apiVersion: v2
+name: argocd-helm-nginx
+version: 0.1.0
+appVersion: "1.26.0"
+description: Nginx simples para laboratório com Helm + ArgoCD
+type: application

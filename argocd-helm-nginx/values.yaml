@@ -1,0 +1,48 @@
+replicaCount: 2
+
+
+image:
+repository: nginx
+tag: "1.26"
+pullPolicy: IfNotPresent
+
+
+service:
+type: ClusterIP
+port: 80
+nodePort: null # só usado se type=NodePort
+
+
+ingress:
+enabled: false
+className: ""
+annotations: {}
+hosts:
+- host: nginx.lab.local
+paths:
+- path: /
+pathType: Prefix
+tls: []
+
+
+resources: {}
+
+
+nodeSelector: {}
+
+
+tolerations: []
+
+
+affinity: {}
+
+
+config:
+indexHtml: |
+<html>
+<head><title>Helm + ArgoCD</title></head>
+<body>
+<h1>Olá, Roberto! 🚀</h1>
+<p>Deploy via Helm chart sincronizado com ArgoCD.</p>
+</body>
+</html>
